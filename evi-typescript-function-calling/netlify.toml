@@ -1,3 +1,10 @@
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "18"
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -10,10 +17,5 @@
 
 [[headers]]
   for = "/*.mjs"
-  [headers.values]
-    Content-Type = "application/javascript"
-
-[[headers]]
-  for = "/*.ts"
   [headers.values]
     Content-Type = "application/javascript"
